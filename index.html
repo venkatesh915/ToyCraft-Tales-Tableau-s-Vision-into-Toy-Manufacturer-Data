@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ToyCraft Tales | Boddu Venkateswara Rao</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #eef3f9, #dde6f6);
+      color: #2c3e50;
+    }
+
+    nav {
+      background: linear-gradient(to right, #001f3f, #003366);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    nav h1 img {
+      height: 40px;
+      margin-right: 12px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #fbc531;
+    }
+
+    .discover-line {
+      background: linear-gradient(270deg, #f6e58d, #ffbe76, #fbc2eb, #a6c1ee, #fcdff2);
+      background-size: 1000% 1000%;
+      animation: gradientShift 12s ease infinite;
+      overflow: hidden;
+      padding: 14px 0;
+    }
+
+    .scrolling-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scrollText 15s linear infinite;
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+      padding-left: 100%;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero {
+      background: white;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 90%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    .hero-content {
+      width: 60%;
+      float: left;
+    }
+
+    .hero img {
+      width: 35%;
+      float: right;
+      max-height: 300px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0984e3;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #74b9ff;
+    }
+
+    footer {
+      clear: both;
+      background: linear-gradient(to right, #2f3640, #353b48);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fbc531;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content, .hero img {
+        float: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero img {
+        margin-top: 20px;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <nav>
+    <h1><img src="images/logo.png" alt="ToyCraft Logo"> ToyCraft Tales</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="story.html">Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="discover-line">
+    <div class="scrolling-text">
+      🚀 Discover Toy Industry Trends, Consumer Insights & Data Stories with <strong>ToyCraft Tales</strong>!
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to ToyCraft Tales</h2>
+      <p>Toys are more than playthings—they are essential to a child’s creativity and development.</p>
+      <p>This project presents interactive Tableau dashboards analyzing toy industry trends and consumer behavior.</p>
+      <a class="btn" href="dashboard.html">View Dashboard →</a>
+    </div>
+    <img src="images/toy-banner.jpg" alt="Toy Showcase">
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> ToyCraft Tales</p>
+    <p>Developed by <strong>Boddu Venkateswara Rao</strong></p>
+    <p><a href="#top">Back to Top ↑</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
