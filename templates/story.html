@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToyCraft Tales | Interactive Story</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f5fafd, #ddeaf6);
+      color: #2c3e50;
+    }
+
+    nav {
+      background: linear-gradient(to right, #001f3f, #003366);
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    nav h1 img {
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fbc531;
+    }
+
+    .section-block {
+      background: white;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .section-block h3 {
+      font-size: 28px;
+      color: #003366;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-block h3 i {
+      margin-right: 10px;
+      color: #0072ff;
+    }
+
+    .section-block p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .tableauPlaceholder {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    @media(max-width:768px){
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <h1>
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="ToyCraft Logo">
+    ToyCraft Tales
+  </h1>
+
+  <ul>
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+    <li><a href="{{ url_for('story') }}">Story</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="section-block">
+  <h3><i class="fas fa-book-open"></i>Discovering the Tale Behind Toy Data</h3>
+
+  <p>
+    This interactive story walks through key insights derived from toy market data,
+    highlighting performance trends, regional growth, seasonal demand patterns,
+    and strategic opportunities — all visualized using Tableau.
+  </p>
+
+  <div class='tableauPlaceholder' id='viz1771045318933' style='position: relative'>
+    <noscript>
+      <a href='#'>
+        <img alt='ToyCraft Tales Story'
+        src='https://public.tableau.com/static/images/To/ToyCraftTalesTableausVisionintoToyManufacturerDatastory_17709815078750/ToyCraftTalesTableausVisionintoToyManufacturerData/1_rss.png'
+        style='border: none' />
+      </a>
+    </noscript>
+
+    <object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https://public.tableau.com/' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='ToyCraftTalesTableausVisionintoToyManufacturerDatastory_17709815078750/ToyCraftTalesTableausVisionintoToyManufacturerData' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image'
+      value='https://public.tableau.com/static/images/To/ToyCraftTalesTableausVisionintoToyManufacturerDatastory_17709815078750/ToyCraftTalesTableausVisionintoToyManufacturerData/1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-GB' />
+    </object>
+  </div>
+
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1771045318933');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+
+    vizElement.style.width = '100%';
+    vizElement.style.height = '850px';
+
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+
+</section>
+
+</body>
+</html>
